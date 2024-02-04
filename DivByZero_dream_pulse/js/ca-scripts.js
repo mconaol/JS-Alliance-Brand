@@ -13,26 +13,45 @@ function addCustomerName() {
 };
 
 function toggleColors() {
-    // <!-- todo: Change all classes named 'tm-white-rect' to 'tm-blue-rect' -->
+    
+      let whiteRectElements = document.querySelectorAll(".tm-white-rect")
+      console.log(whiteRectElements)
+
+      whiteRectElements.forEach(function(element){
+        element.classList.remove('tm-white-rect');
+        element.classList.add('tm-blue-rect')
+      })
 
 };
 
 function hideElement() {
     //<ul class="nav flex-row tm-social-links">  <!--todo: Hide social links-->
-
+    let socialLinks = document.querySelectorAll("nav flex-row tm-social-links")
+    socialLinks.style.visibility = "none";
+    
 };
 
  function addText() {
 
-    //<p id="intropara1" class="tm-color-gray">  <!--todo: Add customer company introduction text about their founding year-->
+   
+let introPara1= document.getElementById("intropara1")
+introPara1.innerText = "Alliance was founded in 1931 by Albert Daniels."
+   
 
-    //<p id="intropara2" class="mb-0 tm-color-gray"> <!--todo: Add customer company introduction text about what they lead in-->
+let introPara2 = document.getElementById("intropara2")
+introPara2.innerText = "The company is a leader in P.C. Manufacturing"
+   
 
-     //<p id="aboutpara1" id="a" class="mb-5"> <!--todo: Add customer company about text-->
+     let aboutpara1 = document.getElementById("aboutpara1")
+     aboutpara1.innerText = "We deliver the best service this side of creation"
 
-    //<p id="aboutpara2"> <!--todo: Add customer company motto text-->
+     
+    let aboutpara2 = document.getElementById ("aboutpara2")
+    aboutpara2.innerText = "Our motto is satisfaction guaranteed"
+    
 
-    // <p id="addresspara" class="mb-3"> <!--todo: Add customer company phone number text-->
+    let addresspara = document.getElementById("addresspara")
+    addresspara.innerText = "1-800-565-5656"
 
 }; 
 
